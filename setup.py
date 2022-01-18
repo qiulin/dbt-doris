@@ -16,9 +16,9 @@ with open(os.path.join(this_directory, 'README.md')) as f:
     long_description = f.read()
 
 
-package_name = "dbt-mysql"
-package_version = "0.19.0"
-description = """The MySQL adapter plugin for dbt (data build tool)"""
+package_name = "dbt-doris"
+package_version = "0.1.0"
+description = """The Apache Doris adapter plugin for dbt (data build tool)"""
 
 
 setup(
@@ -29,16 +29,24 @@ setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
 
-    author="Doug Beatty",
-    author_email="doug.beatty@gmail.com",
-    url="https://github.com/dbeatty10/dbt-mysql",
+    author="qiulin",
+    author_email="lqlin.hz@gmail.com",
+    url="https://github.com/qiulin/dbt-doris",
     packages=[
+        'dbt.adapters.doris',
+        'dbt.include.doris',
         'dbt.adapters.mysql',
         'dbt.include.mysql',
         'dbt.adapters.mysql5',
         'dbt.include.mysql5',
     ],
     package_data={
+        'dbt.include.doris': [
+            'macros/*.sql',
+            'macros/materializations/**/*.sql',
+            'dbt_project.yml',
+            'sample_profiles.yml',
+        ],
         'dbt.include.mysql': [
             'macros/*.sql',
             'macros/materializations/**/*.sql',
