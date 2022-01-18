@@ -1,6 +1,8 @@
-# dbt-mysql
+# dbt-doris
 
-This plugin ports [dbt](https://getdbt.com) functionality to MySQL.
+This plugin ports [dbt](https://getdbt.com) functionality to Apache Doris, based on [dbt-mysql](https://github.com/dbeatty10/dbt-mysql).
+
+Still under development.
 
 This is an experimental plugin:
 - We have not tested it extensively
