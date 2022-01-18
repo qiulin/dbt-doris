@@ -6,7 +6,7 @@ from setuptools import setup
 
 
 if sys.version_info < (3, 6, 2):
-    print('Error: dbt-mysql does not support this version of Python.')
+    print('Error: dbt-doris does not support this version of Python.')
     print('Please upgrade to Python 3.6.2 or higher.')
     sys.exit(1)
 
